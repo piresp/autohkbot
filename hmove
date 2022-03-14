@@ -1,0 +1,44 @@
+/*
+Se necessário mover o pokemon
+*/
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 545, 604, 610, 621, 0x30153E, 0, Fast RGB  ; >> Verificar confusão <<
+If (ErrorLevel = 0)
+{
+    Sleep, 5000
+}
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 547, 605, 613, 623, 0x662D85, 0, Fast RGB  ; >> Verificar confusão <<
+If (ErrorLevel = 0)
+{
+    Sleep, 5000
+}
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 629, 345, 717, 430, 0x0099FF, 0, Fast RGB  ; >> Procurando pixel de vida azul <<
+If (ErrorLevel)
+{
+    CoordMode, Pixel, Window
+    PixelSearch, FoundX, FoundY, 632, 347, 720, 430, 0x00329B, 0, Fast RGB  ; >> Procurando pixel de vida azul <<
+    If (ErrorLevel)
+    {
+        CoordMode, Pixel, Window
+        PixelSearch, FoundX, FoundY, 628, 347, 714, 430, 0x0067CD, 0, Fast RGB  ; >> Procurando pixel de vida azul <<
+        If (ErrorLevel)
+        {
+            CoordMode, Pixel, Window
+            PixelSearch, FoundX, FoundY, 633, 343, 716, 425, 0x000A41, 0, Fast RGB  ; >> Procurando pixel de vida azul <<
+            If (ErrorLevel)
+            {
+                Sleep, 2000
+                Click, 1308, 180 Right, 1  ; >> Clicando no order <<
+                Sleep, 10
+                Click, 685, 488 Left, 1  ; >> Mandando o pokemon para a localização de origem <<
+                Sleep, 10
+                Sleep, 4000
+                Goto, Fish1
+            }
+        }
+    }
+}
+Sleep, 100
+Goto, Fish1
