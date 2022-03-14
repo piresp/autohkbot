@@ -1,0 +1,9 @@
+Sleep, 100
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 1209, 378, 1307, 395, 0xE8C05E, 20, Fast RGB  ; >> Encontrar quarto nome no battle <<
+If (ErrorLevel = 0)
+{
+    Sleep, 100
+    Goto, HBattle1
+}
+Goto, Battle1
