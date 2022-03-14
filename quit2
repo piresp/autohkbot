@@ -1,0 +1,6 @@
+Sleep, 1000
+Click, 1349, 17 Left, 1  ; >> Clicando no X do jogo <<
+Sleep, 10
+Sleep, 500
+Click, 570, 429 Left, 1  ; >> Clicando em forçar sair <<
+Sleep, 10
