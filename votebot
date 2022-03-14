@@ -1,0 +1,18 @@
+Click, 435, 390 Left, 1
+Sleep, 10
+Sleep, 120
+Click, 443, 579 Left, 1
+Sleep, 10
+Sleep, 900
+Send, {F5}
+Sleep, 1400
+CoordMode, Pixel, Window
+ImageSearch, FoundX, FoundY, -452, -62, 913, 669, C:\Users\Gabriel\AppData\Roaming\MacroCreator\Screenshots\Screen_20220314001537.png
+CenterImgSrchCoords("C:\Users\Gabriel\AppData\Roaming\MacroCreator\Screenshots\Screen_20220314001537.png", FoundX, FoundY)
+If ErrorLevel = 0
+	Click, %FoundX%, %FoundY% Left, 1
+If (ErrorLevel = 0)
+{
+    Sleep, 300
+}
+Goto, Voto
