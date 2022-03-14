@@ -1,0 +1,32 @@
+Sleep, 100
+Click, 690, 435 Right, 1  ; >> Clicar com o botão direito em cima do pokemon morto <<
+Sleep, 10
+Sleep, 100
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 1289, 411, 1356, 462, 0x0B1123, 0, Fast RGB  ; >> Encontrar pixel da janela <<
+If (ErrorLevel = 0)
+{
+    Loop, 5
+    {
+        Click, 1200, 451 Left, 1  ; >> Clicar nos itens <<
+        Sleep, 1
+    }
+    Sleep, 100
+    Click, 1359, 425 Left, 1  ; >> Fechar a janela <<
+    Sleep, 10
+}
+Sleep, 50
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 1306, 428, 1363, 467, 0x131C3A, 0, Fast RGB  ; >> Encontrar pixel da janela <<
+If (ErrorLevel = 0)
+{
+    Loop, 5
+    {
+        Click, 1201, 454 Left, 1  ; >> Clicar nos itens <<
+        Sleep, 10
+    }
+    Sleep, 50
+    Click, 1359, 424 Left, 1  ; >> Fechar a janela <<
+    Sleep, 10
+}
+Goto, Catch
