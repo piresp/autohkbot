@@ -1,0 +1,18 @@
+CoordMode, Pixel, Screen
+ImageSearch, FoundX, FoundY, 1297, 666, 1364, 720, *30 C:\Users\Gabriel\AppData\Roaming\MacroCreator\Screenshots\Screen_20211203164120.png
+CenterImgSrchCoords("*30 C:\Users\Gabriel\AppData\Roaming\MacroCreator\Screenshots\Screen_20211203164120.png", FoundX, FoundY)  ; >> Encontrar imagem peixe verde <<
+If (ErrorLevel = 0)
+{
+    CoordMode, Pixel, Window
+    PixelSearch, FoundX, FoundY, 1331, 694, 1357, 713, 0x3D9A2D, 20, Fast RGB
+    If ErrorLevel = 0
+    	Click, %FoundX%, %FoundY% Left, 1  ; >> Encontrar pixel verde do peixe <<
+    If (ErrorLevel = 0)
+    {
+        Goto, HCheck
+    }
+}
+If (ErrorLevel)
+{
+    Goto, Fish2
+}
