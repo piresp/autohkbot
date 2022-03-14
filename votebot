@@ -1,8 +1,6 @@
 Click, 435, 390 Left, 1
-Sleep, 10
 Sleep, 120
 Click, 443, 579 Left, 1
-Sleep, 10
 Sleep, 900
 Send, {F5}
 Sleep, 1400
