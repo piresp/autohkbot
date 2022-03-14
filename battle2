@@ -1,0 +1,43 @@
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 1172, 296, 1199, 404, 0xFF0000, 20, Fast RGB  ; >> Encontrar pixel vermelho <<
+If (ErrorLevel = 0)
+{
+    Send, {F1}
+    Sleep, 200
+}
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 1172, 296, 1199, 404, 0xFF0000, 20, Fast RGB  ; >> Encontrar pixel vermelho <<
+If (ErrorLevel = 0)
+{
+    Send, {F2}
+    Sleep, 200
+}
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 1172, 296, 1199, 404, 0xFF0000, 20, Fast RGB  ; >> Encontrar pixel vermelho <<
+If (ErrorLevel = 0)
+{
+    Send, {F3}
+    Sleep, 200
+}
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 1172, 296, 1199, 404, 0xFF0000, 20, Fast RGB  ; >> Encontrar pixel vermelho <<
+If (ErrorLevel = 0)
+{
+    Send, {F4}
+    Sleep, 200
+}
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 1172, 296, 1199, 404, 0xFF0000, 20, Fast RGB  ; >> Encontrar pixel vermelho <<
+If (ErrorLevel = 0)
+{
+    Send, {F5}
+    Sleep, 200
+}
+Sleep, 200
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 1172, 296, 1199, 404, 0xFF0000, 20, Fast RGB  ; >> Encontrar pixel vermelho <<
+If (ErrorLevel = 0)
+{
+    Goto, HCheck
+}
+Goto, Battle1
