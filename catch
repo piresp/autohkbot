@@ -1,0 +1,20 @@
+/*
+Sleep, 100
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 681, 434, 697, 446, 0x3F6711, 0, Fast RGB  ; >> Procurar pixel do chão no lugar onde pokemons morrem <<
+If (ErrorLevel)
+{
+    SendRaw, r  ; >> Hotkey da pokebola <<
+    Click, 691, 439 Left, 1  ; >> Clicar onde pokemons morrem <<
+    Sleep, 10
+    Sleep, 100
+    CoordMode, Pixel, Window
+    PixelSearch, FoundX, FoundY, 681, 434, 697, 446, 0x3F6711, 0, Fast RGB  ; >> Procurar pixel do chão no lugar onde pokemons morrem <<
+    If (ErrorLevel)
+    {
+        Goto, preLoot
+    }
+    Goto, Alone1
+}
+*/
+Goto, Alone1
