@@ -1,0 +1,15 @@
+CoordMode, Pixel, Window
+ImageSearch, FoundX, FoundY, 1303, 672, 1372, 730, C:\Users\Gabriel\AppData\Roaming\MacroCreator\Screenshots\Screen_20211203060644.png
+CenterImgSrchCoords("C:\Users\Gabriel\AppData\Roaming\MacroCreator\Screenshots\Screen_20211203060644.png", FoundX, FoundY)
+If ErrorLevel = 0
+	Click, %FoundX%, %FoundY% Left, 1  ; >> Encontrar imagem do peixe <<
+If (ErrorLevel = 0)
+{
+    CoordMode, Pixel, Window
+    PixelSearch, FoundX, FoundY, 591, 386, 601, 537, 0x264CA5, 12, Fast RGB
+    If ErrorLevel = 0
+    	Click, %FoundX%, %FoundY% Left, 1  ; >> Clicar no mar <<
+    Sleep, 1000
+    Goto, Fish2
+}
+Goto, Fish1
