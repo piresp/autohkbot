@@ -1,0 +1,18 @@
+Click, 223, 723 Left, 1
+Sleep, 10
+Sleep, 100
+Click, 435, 650 Left, 1
+Sleep, 10
+Sleep, 100
+Click, 42, 493 Left, 1
+Sleep, 10
+Sleep, 3000
+Send, até mais {Enter}
+Sleep, 2000
+Click, 231, 649 Left, 1
+Sleep, 10
+Sleep, 2000
+Click, 1011, 691 Left, 1
+Sleep, 10
+Sleep, 1500
+Goto, Saindo2
