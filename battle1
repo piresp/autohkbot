@@ -1,0 +1,76 @@
+Sleep, 200
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 1172, 296, 1199, 404, 0xFF0000, 20, Fast RGB  ; >> Encontrar pixel vermelho no battle <<
+If (ErrorLevel = 0)
+{
+    Goto, Battle2
+}
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 1182, 305, 1354, 411, 0x00BC00, 20, Fast RGB
+If ErrorLevel = 0
+	Click, %FoundX%, %FoundY% Left, 1  ; >> Encontrar pixel verde de vida no battle <<
+If (ErrorLevel = 0)
+{
+    Sleep, 500
+    Click, 688, 387 Left, 1  ; >> Clicar no pé <<
+    Sleep, 10
+    Goto, Battle2
+}
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 1181, 308, 1353, 410, 0x50A150, 0, Fast RGB
+If ErrorLevel = 0
+	Click, %FoundX%, %FoundY% Left, 1  ; >> Encontrar pixel verde oliva de vida no battle <<
+If (ErrorLevel = 0)
+{
+    Sleep, 500
+    Click, 688, 387 Left, 1  ; >> Clicar no pé <<
+    Sleep, 10
+    Goto, Battle2
+}
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 1183, 305, 1355, 411, 0xA1A100, 0, Fast RGB
+If ErrorLevel = 0
+	Click, %FoundX%, %FoundY% Left, 1  ; >> Encontrar pixel amarelo de vida no battle <<
+If (ErrorLevel = 0)
+{
+    Sleep, 500
+    Click, 688, 387 Left, 1  ; >> Clicar no pé <<
+    Sleep, 10
+    Goto, Battle2
+}
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 1182, 305, 1354, 412, 0xBF0A0A, 20, Fast RGB
+If ErrorLevel = 0
+	Click, %FoundX%, %FoundY% Left, 1  ; >> Encontrar pixel verde de vida no battle <<
+If (ErrorLevel = 0)
+{
+    Sleep, 500
+    Click, 688, 387 Left, 1  ; >> Clicar no pé <<
+    Sleep, 10
+    Goto, Battle2
+}
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 1179, 305, 1364, 413, 0x00BC00, 0, Fast RGB  ; >> Encontrar pixel verde de vida no battle <<
+If (ErrorLevel)
+{
+    CoordMode, Pixel, Window
+    PixelSearch, FoundX, FoundY, 1181, 307, 1369, 410, 0x50A150, 0, Fast RGB  ; >> Encontrar pixel verde oliva de vida no battle <<
+    If (ErrorLevel)
+    {
+        CoordMode, Pixel, Window
+        PixelSearch, FoundX, FoundY, 1181, 304, 1369, 413, 0xA1A100, 0, Fast RGB  ; >> Encontrar pixel amarelo de vida no battle <<
+        If (ErrorLevel)
+        {
+            CoordMode, Pixel, Window
+            PixelSearch, FoundX, FoundY, 1180, 304, 1368, 411, 0xBF0A0A, 0, Fast RGB  ; >> Encontrar pixel vermelho de vida no battle <<
+            If (ErrorLevel)
+            {
+                Click, 688, 387 Left, 1  ; >> Clicar no pé <<
+                Sleep, 10
+                Sleep, 300
+                Goto, Move
+            }
+        }
+    }
+}
+Goto, Move
