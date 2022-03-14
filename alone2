@@ -1,0 +1,92 @@
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 449, 33, 1178, 314, 0x00BC00, 0, Fast RGB  ; Verde Escuro (cima)
+If (ErrorLevel)
+{
+    CoordMode, Pixel, Window
+    PixelSearch, FoundX, FoundY, 206, 203, 581, 589, 0x00BC00, 0, Fast RGB  ; Verde Escuro (esquerda)
+    If (ErrorLevel)
+    {
+        CoordMode, Pixel, Window
+        PixelSearch, FoundX, FoundY, 206, 344, 1179, 586, 0x00BC00, 0, Fast RGB  ; Verde Escuro (direita)
+        If (ErrorLevel)
+        {
+            CoordMode, Pixel, Window
+            PixelSearch, FoundX, FoundY, 734, 34, 1180, 588, 0x00BC00, 0, Fast RGB  ; Verde Escuro (baixo)
+            /*
+            ////////////////////////////////////////////////////////////////
+            */
+            If (ErrorLevel)
+            {
+                CoordMode, Pixel, Window
+                PixelSearch, FoundX, FoundY, 446, 33, 1180, 317, 0x50A150, 0, Fast RGB  ; Verde Claro (cima)
+                If (ErrorLevel)
+                {
+                    CoordMode, Pixel, Window
+                    PixelSearch, FoundX, FoundY, 202, 200, 607, 580, 0x50A150, 0, Fast RGB  ; Verde Claro (esquerda)
+                    If (ErrorLevel)
+                    {
+                        CoordMode, Pixel, Window
+                        PixelSearch, FoundX, FoundY, 204, 347, 1181, 586, 0x50A150, 0, Fast RGB  ; Verde Claro (direita)
+                        If (ErrorLevel)
+                        {
+                            CoordMode, Pixel, Window
+                            PixelSearch, FoundX, FoundY, 734, 33, 1179, 586, 0x50A150, 0, Fast RGB  ; Verde Claro (baixo)
+                            If (ErrorLevel)
+                            {
+                                /*
+                                ////////////////////////////////////////////////////////////////
+                                */
+                                CoordMode, Pixel, Window
+                                PixelSearch, FoundX, FoundY, 209, 33, 1178, 310, 0xA1A100, 0, Fast RGB  ; Amarelo (cima)
+                                If (ErrorLevel)
+                                {
+                                    CoordMode, Pixel, Window
+                                    PixelSearch, FoundX, FoundY, 205, 68, 619, 581, 0xA1A100, 0, Fast RGB  ; Amarelo (esquerda)
+                                    If (ErrorLevel)
+                                    {
+                                        CoordMode, Pixel, Window
+                                        PixelSearch, FoundX, FoundY, 205, 353, 1181, 584, 0xA1A100, 0, Fast RGB  ; Amarelo (direita)
+                                        If (ErrorLevel)
+                                        {
+                                            CoordMode, Pixel, Window
+                                            PixelSearch, FoundX, FoundY, 732, 33, 1181, 584, 0xA1A100, 0, Fast RGB  ; Amarelo (baixo)
+                                            /*
+                                            ////////////////////////////////////////////////////////////////
+                                            */
+                                            If (ErrorLevel)
+                                            {
+                                                CoordMode, Pixel, Window
+                                                PixelSearch, FoundX, FoundY, 208, 33, 1177, 315, 0xA02727, 0, Fast RGB  ; Vermelho (cima)
+                                                If (ErrorLevel)
+                                                {
+                                                    CoordMode, Pixel, Window
+                                                    PixelSearch, FoundX, FoundY, 205, 64, 611, 587, 0xA02727, 0, Fast RGB  ; Vermelho (esquerda)
+                                                    If (ErrorLevel)
+                                                    {
+                                                        CoordMode, Pixel, Window
+                                                        PixelSearch, FoundX, FoundY, 205, 346, 1179, 586, 0xA02727, 0, Fast RGB  ; Vermelho (direita)
+                                                        If (ErrorLevel)
+                                                        {
+                                                            CoordMode, Pixel, Window
+                                                            PixelSearch, FoundX, FoundY, 734, 34, 1180, 586, 0xA02727, 0, Fast RGB  ; Vermelho (baixo)
+                                                            If (ErrorLevel)
+                                                            {
+                                                                Sleep, 300
+                                                                Goto, Fish1
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+Goto, Saindo1
