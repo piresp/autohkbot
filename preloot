@@ -1,0 +1,23 @@
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 628, 404, 719, 425, 0x0099FF, 0, Fast RGB  ; >> Encontrar pixel de vida azul claro <<
+If (ErrorLevel)
+{
+    CoordMode, Pixel, Window
+    PixelSearch, FoundX, FoundY, 628, 408, 714, 422, 0x00329B, 0, Fast RGB  ; >> Encontrar pixel de vida azul escuro <<
+    If (ErrorLevel)
+    {
+        CoordMode, Pixel, Window
+        PixelSearch, FoundX, FoundY, 627, 411, 716, 422, 0x0067CD, 0, Fast RGB  ; >> Encontrar pixel de vida azul <<
+        If (ErrorLevel)
+        {
+            CoordMode, Pixel, Window
+            PixelSearch, FoundX, FoundY, 629, 408, 715, 425, 0x000A41, 0, Fast RGB  ; >> Encontrar pixel de vida azul muito escuro <<
+            If (ErrorLevel)
+            {
+                Sleep, 4000
+                Goto, Loot
+            }
+        }
+    }
+}
+Goto, Loot
