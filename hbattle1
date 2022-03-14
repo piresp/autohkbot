@@ -1,0 +1,95 @@
+Click, 40, 492 Left, 1  ; >> Selecionando pokemon n1 <<
+Sleep, 10
+Sleep, 2000
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 1172, 296, 1199, 404, 0xFF0000, 20, Fast RGB  ; >> Procurando pixel vermelho <<
+If (ErrorLevel = 0)
+{
+    Send, {F1}
+    Sleep, 250
+}
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 1172, 296, 1199, 404, 0xFF0000, 20, Fast RGB  ; >> Procurando pixel vermelho <<
+If (ErrorLevel = 0)
+{
+    Send, {F2}
+    Sleep, 250
+}
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 1172, 296, 1199, 404, 0xFF0000, 20, Fast RGB  ; >> Procurando pixel vermelho <<
+If (ErrorLevel = 0)
+{
+    Send, {F3}
+    Sleep, 250
+}
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 1172, 296, 1199, 404, 0xFF0000, 20, Fast RGB  ; >> Procurando pixel vermelho <<
+If (ErrorLevel = 0)
+{
+    Send, {F4}
+    Sleep, 250
+}
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 1172, 296, 1199, 404, 0xFF0000, 20, Fast RGB  ; >> Procurando pixel vermelho <<
+If (ErrorLevel = 0)
+{
+    Send, {F5}
+    Sleep, 250
+}
+Sleep, 500
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 1172, 296, 1199, 404, 0xFF0000, 20, Fast RGB  ; >> Procurando pixel vermelho <<
+If (ErrorLevel = 0)
+{
+    Goto, HBattle2
+}
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 1172, 296, 1199, 404, 0xFF0000, 20, Fast RGB  ; >> Procurando pixel vermelho <<
+If (ErrorLevel)
+{
+    CoordMode, Pixel, Window
+    PixelSearch, FoundX, FoundY, 1182, 305, 1354, 411, 0x00BC00, 20, Fast RGB
+    If ErrorLevel = 0
+    	Click, %FoundX%, %FoundY% Left, 1  ; >> Procurando barra de vida verde <<
+    If (ErrorLevel = 0)
+    {
+        Sleep, 500
+        Click, 688, 387 Left, 1  ; >> Clicar no chão <<
+        Sleep, 10
+        Goto, HBattle2
+    }
+    CoordMode, Pixel, Window
+    PixelSearch, FoundX, FoundY, 1181, 308, 1353, 410, 0x50A150, 0, Fast RGB
+    If ErrorLevel = 0
+    	Click, %FoundX%, %FoundY% Left, 1  ; >> Procurando barra de vida verde oliva <<
+    If (ErrorLevel = 0)
+    {
+        Sleep, 500
+        Click, 688, 387 Left, 1  ; >> Clicar no chão <<
+        Sleep, 10
+        Goto, HBattle2
+    }
+    CoordMode, Pixel, Window
+    PixelSearch, FoundX, FoundY, 1183, 305, 1355, 411, 0xA1A100, 0, Fast RGB
+    If ErrorLevel = 0
+    	Click, %FoundX%, %FoundY% Left, 1  ; >> Procurando barra de vida amarela <<
+    If (ErrorLevel = 0)
+    {
+        Sleep, 500
+        Click, 688, 387 Left, 1  ; >> Clicar no chão <<
+        Sleep, 10
+        Goto, HBattle2
+    }
+    CoordMode, Pixel, Window
+    PixelSearch, FoundX, FoundY, 1182, 305, 1354, 412, 0xBF0A0A, 20, Fast RGB
+    If ErrorLevel = 0
+    	Click, %FoundX%, %FoundY% Left, 1  ; >> Procurando barra de vida vermelha <<
+    If (ErrorLevel = 0)
+    {
+        Sleep, 500
+        Click, 688, 387 Left, 1  ; >> Clicar no chão <<
+        Sleep, 10
+        Goto, HBattle2
+    }
+}
+Goto, HBattle6
