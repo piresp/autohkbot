@@ -1,0 +1,8 @@
+CoordMode, Pixel, Window
+PixelSearch, FoundX, FoundY, 678, 315, 714, 352, 0xF6FFFF, 0, Fast RGB  ; >> Encontrar bandeira <<
+If (ErrorLevel = 0)
+{
+    Sleep, 1000
+    Goto, Fish3
+}
+Goto, Fish1
